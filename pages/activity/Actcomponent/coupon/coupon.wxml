@@ -1,0 +1,27 @@
+<view class="coupon">
+	<view class="coupon_card" wx:for="{{couponlist}}" wx:key="index">
+		<view class="coupon_card_left">
+			<view class="coupon_card_left_text">
+				<view class="coupon_card_left_price">
+					<view class="coupon_card_left_price01">¥{{item.money}}</view>
+					<view class="coupon_card_left_price02">满{{item.reduction}}使用</view>
+				</view>
+				<view class="coupon_card_left_msg">
+					<view class="coupon_card_left_msg_name">{{item.name}}</view>
+					<view class="coupon_card_left_msg_con">
+						<view>{{item.shop}}</view>
+						<view>{{item.date}}</view>
+					</view>
+				</view>
+			</view>
+			<image class="coupon_card_left_img" src="http://zxty.mrhkj.com/assets/index/activity/actcard1.png"></image>
+			<view class="coupon_card_left_icon1"></view>
+
+		</view>
+		<view class="coupon_card_right">
+			<view>立即</view>
+			<view>领取</view>
+		</view>
+
+	</view>
+</view>

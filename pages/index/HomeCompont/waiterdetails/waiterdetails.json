@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "ActionSheet": "/pages/Components/actionsheet/actionsheet"
+  },
+
+    "navigationBarBackgroundColor": "#FADBB4",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "white"
+  
+}

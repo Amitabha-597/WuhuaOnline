@@ -1,0 +1,145 @@
+<view class="seds">
+	<view class="seds_imgorlite">
+		<image class="seds_img" src="http://zxty.mrhkj.com/assets/index/index/shoplist/seds.png"></image>
+		<view class="seds_title">
+			<view class="seds_title_icon">
+				<image class="seds_title_icon" src="http://zxty.mrhkj.com/assets/index/index/shoplist/avartar.png"></image>
+			</view>
+			<view class="seds_title_msg">
+				<view class="seds_title_name"><text>勤鸽家政服务有限公司</text>
+					<image class="seds_title_name_goldl" src="http://zxty.mrhkj.com/assets/index/index/shoplist/goldl.png"></image>
+				</view>
+				<view class="seds_title_evaluate">
+					<image class="seds_title_msgicon" src="http://zxty.mrhkj.com/assets/index/index/shoplist/heart.png"></image>
+					<text>好评率100%</text>
+					<text>成交量1200</text>
+				</view>
+			</view>
+			<view class="seds_title_sharebox">
+				<view class="seds_title_share">
+					<image class="seds_title_shareimg" src="http://zxty.mrhkj.com/assets/index/index/shoplist/share.png"></image>
+					<text class="seds_title_sharetxt">分享</text>
+				</view>
+			</view>
+
+		</view>
+		<view class="seds_title_info">
+			<view class="seds_title_infotext">勤鸽家政服务有限公司提供专业清洁服务、专业从事外墙清洗、开 荒清洁、地毯清洗、楼宇清洁、物asdasdadasdasssssssssssssssssssssssssssssss业保洁、商......</view>
+		</view>
+	</view>
+	<view class="seds_colorbar"></view>
+	<view class="seds_card">
+		<view class="seds_cardtab">
+
+
+			<view class='title'>
+				<view class='titleSel' bindtap='titleClick' data-idx='0'>
+					<text>店铺员工</text>
+					<hr class="{{0 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}}" />
+				</view>
+
+				<view class='titleSel' bindtap='titleClick' data-idx='1'>
+					<text>服务项目</text>
+					<hr class="{{1 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}} " />
+				</view>
+				<view class='titleSel' bindtap='titleClick' data-idx='2'>
+					<text>客户评价</text>
+					<hr class="{{2 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}} " />
+				</view>
+			</view>
+
+			<!--内容布局-->
+			<swiper class='swiper' bindchange='pagechange' current='{{currentIndex}}'>
+				<swiper-item class='swiper'>
+					<view id="waiter">
+						<view class="waiter_item" wx:for="{{waiterlist}}" wx:key="*this">
+							<view class="waiter_img">
+
+								<image src="http://zxty.mrhkj.com/assets/index/index/waiter/{{item.img}}.png" mode="widthFix"></image>
+
+							</view>
+							<view class="waiter_msg">
+								<view class="msg_info">
+									<text>{{item.name}} </text>
+									<text>{{item.age}}岁 </text>
+									<text class="price">{{item.price}}元/h</text>
+								</view>
+								<view class="msg_skill">
+									<text>{{item.skill.skill01}} </text>|
+									<text> {{item.skill.skill02}}</text>
+								</view>
+								<view class="msg_badge">
+									<text>{{item.badge.badge01}}</text>
+									<text>{{item.badge.badge02}}</text>
+								</view>
+								<view class="msg_checked">
+									<button>专人服务</button>
+								</view>
+							</view>
+						</view>
+					</view>
+				</swiper-item>
+				<swiper-item class='swiper' class='swiper'>
+					<view class="serviceItems">
+						<view class="serviceItemschild" wx:for="{{serviceItems}}" wx:key="id">
+							<image class="serviceItemschild_img" src="http://zxty.mrhkj.com/assets/index/index/shoplist/{{item.img}}.png"></image>
+							<view class="serviceItemschild_msg">
+								<view class="serviceItemschild_msg_con">
+									{{item.content}}
+								</view>
+								<view class="serviceItemschild_msg_eva">
+									<image style="width:21rpx;vertical-align: middle; margin-right: 10rpx;" src="http://zxty.mrhkj.com/assets/index/index/shoplist/heart.png" mode="widthFix"></image>
+									<text>好评率{{item.evaluate}}%   </text>
+									<text>预约次数:{{item.frequency}}</text>
+								</view>
+								<view class="serviceItemschild_msg_pric">
+									<view class="serviceItemschild_msg_price">¥{{item.price}}</view>
+									<navigator class="serviceItemschild_msg_btn" url="pages/index/HomeCompont/ConfirmOrder/index">立即预约</navigator>
+								</view>
+							</view>
+						</view>
+
+					</view>
+				</swiper-item>
+				<swiper-item class='swiper' class='swiper'>
+					<view class="seds_comment">
+						<view class="seds_comment_title">
+							<text class="seds_comment_mun">评论189</text>
+							<navigator class="seds_comment_next" url="/pages/index/HomeCompont/servicedetails/comments/comment?title=navigate">更多</navigator>
+						</view>
+						<view class="seds_comment_list">
+							<view class="seds_comment_list_item" wx:for="{{userevaluation}}" wx:key="id">
+								<view class="seds_comment_list_left">
+									<view class="seds_comment_list_useravtar">
+										<image style="width:78rpx;" src="http://zxty.mrhkj.com/assets/index/index/shoplist/useravatar.png" mode="widthFix"></image>
+									</view>
+								</view>
+								<view class="seds_comment_list_right">
+									<view class="seds_comment_list_username">
+										<text>{{item.name}}</text>
+										<image style="width:29rpx; margin-left: 10rpx; vertical-align: middle;" src="http://zxty.mrhkj.com/assets/index/index/shoplist/heart.png " mode="widthFix"></image>
+									</view>
+									<view class="seds_comment_list_usercom">{{item.evaluateL}}</view>
+									<view class="seds_comment_list_userdate">
+										<text>{{item.date}}</text>
+
+										<view>12<image style="width:20rpx; margin-left: 5rpx; vertical-align: middle;" src="http://zxty.mrhkj.com/assets/index/index/shoplist/heart.png " mode="widthFix"></image>
+										</view>
+									</view>
+								</view>
+							</view>
+
+						</view>
+
+					</view>
+				</swiper-item>
+			</swiper>
+
+
+
+
+		</view>
+
+
+	</view>
+</view>

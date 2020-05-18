@@ -1,0 +1,48 @@
+<view class="writerData">
+	<view class="writerDatacard">
+		<view class="writerDatacardtitle">身份证件资料</view>
+		<view class="writerDatacardmsg">
+			<view>
+				<text>姓名</text>
+				<text>方秀英</text>
+			</view>
+			<view>
+				<text>手机号</text>
+				<text>18612345678</text>
+			</view>
+			<view>
+				<text>身份证号</text>
+				<text>51112419820903621X</text>
+			</view>
+
+		</view>
+	</view>
+	<view class="idcarddata">
+		<view class="writerDatacardtitle">基本信息</view>
+		<view class="idcarddataimg">
+			<view>
+				<view></view>
+				<text>手持身份证正面</text>
+			</view>
+			<view>
+				<view></view>
+				<text>手持身份证反面</text>
+			</view>
+
+		</view>
+	</view>
+  	<view class="idcarddata">
+		<view class="writerDatacardtitle">技能证书资料</view>
+		<view class="idcarddataimg">
+			<view>
+				<view></view>
+				<text>技能证书</text>
+			</view>
+			<view>
+				<view></view>
+				<text>技能证书</text>
+			</view>
+
+		</view>
+	</view>
+</view>

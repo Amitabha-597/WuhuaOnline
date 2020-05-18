@@ -1,0 +1,122 @@
+<view class="onlineservice">
+  <view class="onlineserviceTop">
+    <view class="onnes_imgbox">
+      <image style="width:100%" src="http://zxty.mrhkj.com/assets/index/index/waiterdetails/whiterpsoto.png" mode="widthFix"> </image>
+    </view>
+    <view class="onnes_msgbox">
+      <view class="onnes_msg_title">90-150㎡室内全面清洁打扫一次</view>
+      <view class="onnes_msg_price">
+        <text style="font-size: 28rpx;">¥</text>
+        <text style="font-size: 36rpx;">166.00</text>
+      </view>
+    </view>
+    <view class="onnes_msgcard">
+      <view class="onnes_msg_carditem">
+        <image style="width:24rpx; vertical-align: middle; margin-right: 10rpx;" src="http://zxty.mrhkj.com/assets/index/index/waiterdetails/heart.png" mode="widthFix"></image>
+        <text>好评率100%</text>
+      </view>
+      <view class="onnes_msg_carditem">
+        <text>已预约1200</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="onnes_checkbox">
+    <view class="onnes_checkitem">
+      <view class="onnes_checkitem_name">类型</view>
+      <view class="onnes_checkitem_cont">
+        <text>勤鸽家政服务有限公司</text>
+        <image style="width:12rpx;  margin-right: 20rpx;" src="http://zxty.mrhkj.com/assets/index/index/waiterdetails/next.png" mode="widthFix"></image>
+
+      </view>
+    </view>
+    <view class="onnes_checkitem">
+      <view class="onnes_checkitem_name ">店铺</view>
+      <view class="onnes_checkitem_cont bor">
+
+        <text>   清洁清扫、保姆月嫂</text>
+
+        <image style="width:12rpx;  margin-right: 20rpx;" src="http://zxty.mrhkj.com/assets/index/index/waiterdetails/next.png" mode="widthFix"></image>
+
+      </view>
+    </view>
+    <view class="onnes_checkitem">
+      <view class="onnes_checkitem_name">区域</view>
+      <view class="onnes_checkitem_cont">
+        <text>五华县</text>
+        <image style="width:12rpx;  margin-right: 20rpx;" src="http://zxty.mrhkj.com/assets/index/index/waiterdetails/next.png" mode="widthFix"></image>
+
+      </view>
+    </view>
+  </view>
+  <view class="">
+    <view class='onnes_tab'>
+
+      <view class='title'>
+        <view class='titleSel' bindtap='titleClick' data-idx='0'>
+          <text>服务详情</text>
+          <hr class="{{0 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}}" />
+        </view>
+
+        <view class='titleSel' bindtap='titleClick' data-idx='1'>
+          <text>客户评价</text>
+          <hr class="{{1 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}} " />
+        </view>
+      </view>
+
+
+      <swiper class='swiper' bindchange='pagechange' current='{{currentIndex}}'>
+        <swiper-item class='swiper'>
+          <image style="width:690rpx" src="http://zxty.mrhkj.com/assets/index/index/waiterdetails/serverconnen.png" mode="widthFix"></image>
+        </swiper-item>
+        <swiper-item class='swiper' class='swiper'>
+          <view class="seds_comment">
+            <view class="seds_comment_title">
+              <text class="seds_comment_mun">评论189</text>
+              <navigator class="seds_comment_next" url="/pages/index/HomeCompont/servicedetails/comments/comment?title=navigate">更多</navigator>
+            </view>
+            <view class="seds_comment_list">
+              <view class="seds_comment_list_item" wx:for="{{userevaluation}}" wx:key="id">
+                <view class="seds_comment_list_left">
+                  <view class="seds_comment_list_useravtar">
+                    <image style="width:78rpx;" src="http://zxty.mrhkj.com/assets/index/index/shoplist/useravatar.png" mode="widthFix"></image>
+                  </view>
+                </view>
+                <view class="seds_comment_list_right">
+                  <view class="seds_comment_list_username">
+                    <text>{{item.name}}</text>
+                    <image style="width:29rpx; margin-left: 10rpx; vertical-align: middle;" src="http://zxty.mrhkj.com/assets/index/index/shoplist/heart.png " mode="widthFix"></image>
+                  </view>
+                  <view class="seds_comment_list_usercom">{{item.evaluateL}}</view>
+                  <view class="seds_comment_list_userdate">
+                    <text>{{item.date}}</text>
+
+                    <view>12
+                      <image style="width:20rpx; margin-left: 5rpx; vertical-align: middle;" src="http://zxty.mrhkj.com/assets/index/index/shoplist/heart.png " mode="widthFix"></image>
+                    </view>
+                  </view>
+                </view>
+              </view>
+
+            </view>
+
+          </view>
+        </swiper-item>
+      </swiper>
+    </view>
+
+
+  </view>
+
+</view>
+<view class="details_footer">
+  <view class="details_footerbox1 .br">
+    <image style="width:26rpx;margin-right:10rpx; vertical-align: middle;" src="http://zxty.mrhkj.com/assets/index/index/waiterdetails/msg.png" mode="widthFix"></image>
+    <navigator url="/pages/index/HomeCompont/onlineservice/OnlineServiceChat/index">在线客服</navigator>
+  </view>
+  <view class="details_footerbox1">
+    <image style="width:26rpx;margin-right:10rpx; vertical-align: middle;" src="http://zxty.mrhkj.com/assets/index/index/waiterdetails/tel.png" mode="widthFix"></image>
+    <text>电话咨询</text>
+  </view>
+  <navigator class="details_footerbtn" url="/pages/index/HomeCompont/ConfirmOrder/index">立即预约</navigator>
+</view>

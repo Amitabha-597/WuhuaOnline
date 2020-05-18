@@ -1,0 +1,45 @@
+<view class="moreshop">
+	<Search class="moreshop_search"></Search>
+
+	<view class="moreshop_tabcard">
+		<view class="moreshop_tabcard_item active">综合</view>
+		<view class="moreshop_tabcard_item" bindtap="showtype">服务类型 <image class="moreshop_tabcard_item_img" src="/assets/imgs/index/shoplist/selectss.png"></image>
+		</view>
+	</view>
+	<view id="moreshop_list">
+		<view wx:for="{{shoplist}}" wx:key="*this" class="goldshop_item">
+			<image class="goldl" src="http://zxty.mrhkj.com/assets/index/index/shoplist/goldl.png"></image>
+			<image src="http://zxty.mrhkj.com/assets/index/index/shoplist/shop.png" mode="widthFix"></image>
+			<view class="shop_msg">
+				<view class="shop_msg_text">
+					<view class="shop_name">
+						{{item.shopname}}</view>
+					<view class="shop_volume"> 
+						<image class="heart" src="/assets/imgs/index/shoplist/heart.png"></image>
+						<text>好评率{{item.evaluate}}%</text>
+						<text>成交量{{item.volume}}</text>
+					</view>
+				</view>
+				<navigator  class="shop_goshop" url="/pages/index/HomeCompont/servicedetails/servicedetails">
+						<button>进店</button>
+					</navigator>
+			</view>
+		</view>
+	</view>
+	<view class="shop_type " style="display:{{typeshow ? 'block' : 'none'}}">
+		<view class="shop_type_child">
+
+			<view class="shop_type_name">服务类型</view>
+			<view class="shop_type_itembox">
+				<view class="shop_type_item" wx:for="{{typecard}}" wx:key="id">{{item.name}}</view>
+
+			</view>
+			<view class="shop_type_itembtn">
+
+				<view class="shop_type_item_rest">重置</view>
+				<view class="shop_type_item_see" bindtap="seeShop">查看店铺</view>
+			</view>
+
+		</view>
+	</view>
+</view>

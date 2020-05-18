@@ -1,0 +1,94 @@
+<view class="DowCenter">
+	<view class="DowCenter_hrader">
+		<view class="DowCenter_hrader_mun">
+			<image style="width:34rpx" src="./DowCenterImg/Step1.png" mode="widthFix"></image>
+			<view class="line"></view>
+			<image style="width:34rpx" src="./DowCenterImg/Step2.png" mode="widthFix"></image>
+			<view class="line"></view>
+			<image style="width:34rpx" src="./DowCenterImg/Step3.png" mode="widthFix"></image>
+		</view>
+		<view class="DowCenter_hrader_text">
+			<text>店铺资料</text>
+			<text>更多资料</text>
+			<text>入驻费用</text>
+		</view>
+	 </view>
+	<view class="DowCenter_main">
+		<view class="ShopName">
+			<view>店铺名称</view>
+			<view>
+				<text>勤鸽家政服务有限公司</text>
+				<image style="width:13rpx;margin-left: 20rpx;" src="http://zxty.mrhkj.com/assets/index/myhome/next.png" mode="widthFix"></image>
+			</view>
+
+		</view>
+		<view class="ShopName">
+			<view>企业名称</view>
+			<view>
+				<text>勤鸽家政服务有限公司</text>
+				<image style="width:13rpx;margin-left: 20rpx;" src="http://zxty.mrhkj.com/assets/index/myhome/next.png" mode="widthFix"></image>
+			</view>
+		</view>
+		<view class="ShopName">
+			<view>店铺地址</view>
+			<view>
+				<image style="width:13rpx;margin-left: 20rpx;" src="http://zxty.mrhkj.com/assets/index/myhome/next.png" mode="widthFix"></image>
+			</view>
+		</view>
+		<view class="ShopName2" bindtap="SelectServiceType">
+
+			<view>服务类型</view>
+			<view class="ShopName2_type">
+				<text>清洗清扫</text>
+				<text>保姆月嫂</text>
+				<text>绿化除草</text>
+			</view>
+			<view>
+				<!-- <image style="width:13rpx;margin-left: 20rpx;" src="http://zxty.mrhkj.com/assets/index/myhome/next.png" mode="widthFix"></image> -->
+			</view>
+		</view>
+		<view class="ShopName2">
+			<view>所属地区</view>
+			<picker class="ShopNamea_add" mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+				{{region[0]}}，{{region[1]}}，{{region[2]}}
+			</picker>
+				<image style="width:13rpx;margin-left: 20rpx;" src="./DowCenterImg/next.png" mode="widthFix"></image>
+			<view>
+			</view>
+		</view>
+
+		<view class="certificate">
+			<view class="certificate_title">营业执照及相关证书</view>
+			<view class="certificate_main">
+				<view class="certificate_main_item">
+					<view class="certificate_main_item_img">
+						<image style="width:288rpx" src="http://zxty.mrhkj.com/assets/index/myhome/certificate1.png" mode="widthFix"> </image>
+					</view>
+					<view>营业执照</view>
+				</view>
+				<view class="certificate_main_item">
+					<view class="certificate_main_item_img">
+						<image style="width:288rpx" src="http://zxty.mrhkj.com/assets/index/myhome/certificate2.png" mode="widthFix"> </image>
+					</view>
+					<view>其他证件</view>
+				</view>
+				<view class="certificate_main_item">
+					<view class="certificate_main_item_img">
+						<image style="width:65rpx" src="http://zxty.mrhkj.com/assets/index/myhome/camera.png" mode="widthFix"> </image>
+					</view>
+					<view>其他证件</view>
+				</view>
+
+
+			</view>
+		</view>
+
+
+
+	</view>
+	<view class="DowCenter_footer">
+		<view class="DowCenter_footer_btn" bindtap="NextStep">下一步
+		</view>
+
+	</view>
+</view>

@@ -1,0 +1,22 @@
+<view class="setmeal">
+	<view class="setmeal_item" wx:for="{{writerList}}" wx:key="*this">
+		<view class="setmeal_item_imgbox">
+			<image class="setmeal_item_img" src="/assets/imgs/activity/whiter.png"></image>
+			<view class="setmeal_item_countdown"> 数量有限，抢完截止</view>
+		</view>
+		<view class="setmeal_item_info">{{item.content}}</view>
+		<view class="setmeal_item_outtime">
+			<view class="setmeal_item_outtimeday">{{item.outday}}日恢复原价</view>
+		</view>
+		<view class="setmeal_item_num">
+		<view class="setmeal_item_num_price">
+    <view class="setmeal_item_num_price_newprice">¥199.00</view>
+    <view class="setmeal_item_num_price_oldrice">¥266.00</view>
+     </view>
+
+			<view class="setmeal_item_num_btn">去订购</view>
+		</view>
+
+	</view>
+
+</view>

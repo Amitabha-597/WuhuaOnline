@@ -1,0 +1,64 @@
+<view class="VideoBox">
+	<video id="myvideo" src="https://vdept.bdstatic.com/7943506356685233666d4d46484b3734/4c7a413676677537/cd4bf3795ee1bda31e8ca5c43d439536b840ec95cf2297b0f8ccabb82aa310314f49a5dbfd9b17e25dcd8c9672a9d05d.mp4?auth_key=1589171474-0-0-911a051618821f316d37e742e5acbae0" binderror="videoErrorCallback"   controls></video>
+	<view class="VideoTitle">
+		<view class="VideoName">育儿经验理论</view>
+		<view class="VideoDate">
+			<text>穆丹—大学教师 </text>
+			<text>2020.03.08发布</text>
+		</view>
+		<view class="VideoScore">评分:8 | 共5课时</view>
+	</view>
+
+
+
+	<view>
+		<view class='Train'>
+			<view class='title'>
+				<view class='titleSel' bindtap='titleClick' data-idx='0'>
+					<view style="color:{{0 == currentIndex ? '#EC8401' : ''}}">详情</view>
+					<hr class="{{0 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}}" />
+				</view>
+				<view class='titleSel' bindtap='titleClick' data-idx='1'>
+					<view style="color:{{1 == currentIndex ? '#EC8401' : ''}}">目录</view>
+					<hr class="{{1 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}} " />
+				</view>
+			</view>
+
+			<swiper class='swiper' bindchange='pagechange' current='{{currentIndex}}'>
+				<swiper-item class='swiper'>
+					<view class="CourseIntr">
+						<view class="CourseIntr_title">课程介绍</view>
+						<view class="CourseIntr_conent">
+							<view>一般家务：做饭，家庭保洁、洗衣、园艺等等，一般都形式为主的服务。</view>
+							<view>看护工作：看护就分为几个部分，有婴幼儿的照料和看护理；
+								在家庭或者是在医院照料、看护病人；护理产妇这种服务为
+								月嫂服务。</view>
+							<view>家庭教育：对幼儿或者小生的学是智力进行开发，还有学业
+								上的相关辅导。</view>
+							<view> 家庭秘书：这一种是从事家庭或者是家庭企业的文书档括了
+								采购、记账等方面的服务。</view>
+							<view>家庭安全员：可以分为两种，一种是专门负责家庭器物全维
+								护，像水电和电器及电脑等住宅电器的维修服务和这个也被
+								称之为是家庭技术人员。</view>
+						</view>
+					</view>
+				</swiper-item>
+				<swiper-item class='swiper' class='swiper'>
+					<view class="Catalog">
+						<view class="CatalogItem" wx:for="{{CatalogList}}" wx:key="actionIndex" bindtap="CatalogSelect" wx:for-index="actionIndex" data-index="{{actionIndex}}">
+							<view class="CatalogItemA">
+								<text style="color:{{CatalogSelect == actionIndex ? '#ec8401' : '#222'}}">{{item.Coursename}}</text>
+								<image wx:if="{{CatalogSelect == actionIndex}}" style="width: 25rpx;" src="./check.png" mode="widthFix"></image>
+							</view>
+							<view class="CatalogItemB">{{item.Duration}}min | {{item.ViewTimes}}次学习</view>
+						</view>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 					</view>
+				</swiper-item>
+			</swiper>
+		</view>
+
+
+
+
+	</view>
+</view>

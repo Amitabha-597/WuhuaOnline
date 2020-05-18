@@ -1,0 +1,87 @@
+<view class="ConfirmOrder">
+	<view class="OrderMsg">
+
+
+		<view class="OrderMsg_Left">
+			<image style="width:20rpx" src="http://zxty.mrhkj.com/assets/index/index/ConfirmOrder/address.png" mode="widthFix"></image>
+		</view>
+		<view class="OrderMsg_Middle">
+			<view class="OrderUser">
+				<view> <text> 雇主：</text>
+					<text>欧阳妮妮</text></view>
+				<text>18620650810</text>
+
+			</view>
+			<view class="OrderAdd">
+				<text>服务地址：</text>
+				<text>广东省梅州市五华县华兴北路嘉福苑4栋1单元602</text>
+			</view>
+		</view>
+		<view class="OrderMsg_Right">
+			<navigator url="/pages/myhome/MyHomeComs/ServiceAddress/index">
+				<image style="width:15rpx" src="http://zxty.mrhkj.com/assets/index/index/ConfirmOrder/next.png" mode="widthFix"></image>
+			</navigator>
+
+		</view>
+	</view>
+	<view class="OrdeOptionr">
+		<view class="OrdeContent">
+			<view class="OrdeContent_img">
+				<image style="width:158rpx" src="http://zxty.mrhkj.com/assets/index/index/ConfirmOrder/sever.png" mode="widthFix"></image>
+			</view>
+			<view class="OrdeContent_txt">
+				<view class="OrdeContent_txtcont">90-150㎡室内全面清洁打扫一次</view>
+				<view class="OrdeContent_txtname">勤鸽家政服务有限公司</view>
+				<view class="OrdeContent_txtname">
+					<text style="margin-right: 30rpx;">清洁清洗</text>
+					<text>五华县</text>
+				</view>
+				<view class="OrdeContent_txtnum">
+					<view>¥{{unitPrice}}</view>
+					<view class="OrdeContent_txtcut">
+						<image style="width:16rpx;vertical-align: middle; margin-right: 20rpx;" src="http://zxty.mrhkj.com/assets/index/index/ConfirmOrder/cut.png" mode="widthFix" bindtap="AddNum" data-num="-1" ></image>
+						<text class="OrdeContent_txtval">{{totalNum}}</text>
+						<image style="width:16rpx;vertical-align: middle;margin-left: 20rpx;" src="http://zxty.mrhkj.com/assets/index/index/ConfirmOrder/add.png" mode="widthFix" bindtap="AddNum" data-num="1"></image>
+					</view>
+
+				</view>
+
+			</view>
+		</view>
+
+		<view class="OrdeOptionr_item">
+			<view class="OrdeOptionr_itemList">
+				<text>上门服务</text>
+				<image style="width:12rpx" src="http://zxty.mrhkj.com/assets/index/index/ConfirmOrder/next.png" mode="widthFix"></image>
+			</view>
+			<view class="OrdeOptionr_itemList" bindtap="SelectWriter">
+				<text>服务人员</text>
+				<image style="width:12rpx" src="http://zxty.mrhkj.com/assets/index/index/ConfirmOrder/next.png" mode="widthFix"></image>
+			</view>
+			<view class="OrdeOptionr_itemList" bindtap="showPayMode">
+				<text>支付方式</text>
+				<image style="width:12rpx" src="http://zxty.mrhkj.com/assets/index/index/ConfirmOrder/next.png" mode="widthFix"></image>
+			</view>
+			<view class="OrdeOptionr_itemList" bindtap="showCoupon">
+				<text>优惠券</text>
+				<image style="width:12rpx" src="http://zxty.mrhkj.com/assets/index/index/ConfirmOrder/next.png" mode="widthFix"></image>
+			</view>
+			<view class="OrdeOptionr_itemListb">
+				<text>服务小费</text>
+				<input class="Gratuity" class="OrdeOptionr_itemListinput" placeholder="（输入已协商好的小费）"></input>
+			</view>
+		</view>
+	</view>
+</view>
+<view class="placeOrder">
+	<view class="placeOrdermun">共 {{totalNum}} 件 </view>
+	<view class="placeOrderprice"><text>合计 </text><text>¥ {{ totalPrice}}</text></view>
+	<view class="placeOrderbtn">
+		<navigator url="/pages/myhome/MyHomeComs/ServiceAddress/index">提交订单</navigator>
+
+	</view>
+
+</view>
+<SelectWaiter bindactiontap="btnClick" show="{{showSelectWaiter}}" actions="{{waiter}}" title="这"></SelectWaiter>
+<PayMode bindactiontap="btnClick" show="{{showPayMode}}" actions="{{PayMode}}" title="这"></PayMode>
+<Coupon bindactiontap="btnClick" show="{{showCoupon}}" actions="{{Coupon}}" title="这"></Coupon>

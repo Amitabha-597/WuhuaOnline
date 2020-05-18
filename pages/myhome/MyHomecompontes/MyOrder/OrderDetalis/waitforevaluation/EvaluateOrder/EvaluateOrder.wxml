@@ -1,0 +1,108 @@
+<view class="EvaOrder">
+	<view class="ApplyRefund_boxA">
+		<view class="ARB_imgbox"></view>
+		<view class="ARB_contentbox">
+			<view class="ARB_contentboxA">90-150㎡室内清洁打扫一次</view>
+			<view class="ARB_contentboxB">
+				<text>勤鸽家政服务有限公司</text>
+				<text>清洁清洗</text>
+				<text>五华县</text>
+			</view>
+			<view class="ARB_contentboxC">
+				<text style="color:#EC8401">¥166.00</text>
+				<text>X1</text></view>
+		</view>
+	</view>
+	<view class="EvaOrderline"></view>
+
+	<view class="EvaOrderB">
+		<view class="EvaluateBA">
+			<view class="EvaluateBAitem">
+				<view class="EvaluateBAimgbox"></view>
+				<text>好评</text>
+			</view>
+			<view class="EvaluateBAitem" bindtap="Evaluate">
+				<view class="EvaluateBAimgbox"></view>
+				<text>中评</text>
+			</view>
+			<view class="EvaluateBAitem">
+				<view class="EvaluateBAimgbox"></view>
+				<text>差评</text>
+			</view>
+
+			<view></view>
+			<view></view>
+		</view>
+		<view class="EvaluateBB">
+			<textarea placeholder="请描述一下此次服务的感受吧"></textarea>
+			<view class="EvaluateBBImg">
+
+			</view>
+		</view>
+	</view>
+	<view class="EvaOrderline"></view>
+
+	<view class="EvaOrderC">
+		<view class="EvaOrderC_title">
+			<view style="width: 5rpx;height: 30rpx;background: #F44F4F; margin-right: 13rpx;"></view>店铺评分
+		</view>
+		<view class="EvaOrderC_content">
+			<view class="EvaOrderC_contentLeft">
+				<text>描述相符</text>
+				<text>物流服务</text>
+				<text>服务态度</text>
+			</view>
+			<view class="EvaOrderC_contentRight">
+				<view>
+					<block wx:for="{{describeOn}}" wx:key="index">
+						<image catchtap='describeStar' id='{{index+1}}' data-in='star' src='/assets/imgs/myhome/heartcheck.png' style="margin-right: 20rpx;height:25rpx; width:29rpx; "></image>
+					</block>
+					<block wx:for="{{describeNot}}" wx:key="index">
+						<image catchtap='describeStar' id='{{index+1}}' data-in='starg' src='/assets/imgs/myhome/heartno.png' style="margin-right: 20rpx;height:25rpx; width:29rpx; "></image>
+					</block>
+					{{describeOn}}
+				</view>
+				<view>
+					<block wx:for="{{LogisticsOn}}" wx:key="index">
+						<image catchtap='Logistics' id='{{index+1}}' data-in='star' src='/assets/imgs/myhome/heartcheck.png' style="margin-right: 20rpx;height:25rpx; width:29rpx; "></image>
+					</block>
+					<block wx:for="{{LogisticsNot}}" wx:key="index">
+						<image catchtap='Logistics' id='{{index+1}}' data-in='starg' src='/assets/imgs/myhome/heartno.png' style="margin-right: 20rpx;height:25rpx; width:29rpx; "></image>
+					</block>
+					{{LogisticsOn}}
+				</view>
+				<view>
+					<block wx:for="{{AttitudeOn}}" wx:key="index">
+						<image catchtap='Attitude' id='{{index+1}}' data-in='star' src='/assets/imgs/myhome/heartcheck.png' style="margin-right: 20rpx;height:25rpx; width:29rpx; "></image>
+					</block>
+					<block wx:for="{{AttitudeNot}}" wx:key="index">
+						<image catchtap='Attitude' id='{{index+1}}' data-in='starg' src='/assets/imgs/myhome/heartno.png' style="margin-right: 20rpx;height:25rpx; width:29rpx; "></image>
+					</block>
+					{{AttitudeOn}}
+				</view>
+
+
+
+			</view>
+		</view>
+	</view>
+	<view class="EvaOrderline"></view>
+	<view class="EvaOrderD">
+		<view class="Anonymousbox">
+			<image style="width:30rpx; margin-right: 10rpx;" src="./Tick.png" mode="widthFix"></image>
+			<text>匿名评价</text>
+		</view>
+		<view class="SubmitEvaluation" bindtap="showSuccess">提交评价</view>
+	</view>
+
+
+</view>
+<view style="display:{{showSuccess ? 'none' : 'block'}}" class="Eva_SuccessBOX">
+	<view class="Eva_Success">
+		<view class="Eva_Success_item">
+			<image style="width:100rpx; height:100rpx" src="/assets/imgs/myhome/evasuccess.png"></image>
+			<view class="Eva_Success_itemB">评价成功 </view>
+		</view>
+	</view>
+
+</view>

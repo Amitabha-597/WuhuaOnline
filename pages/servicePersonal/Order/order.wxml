@@ -1,0 +1,42 @@
+<!--pages/servicePersonal/Order/order.wxml-->
+<view class="order">
+
+	<view class="orderItem">
+		<view class="orderItemTitle">
+			<view>
+				<text>订单编号：</text>
+				<text>980000123456789</text>
+			</view>
+			<view style="color:#EC8401">待上门</view>
+		</view>
+		<view class="orderItemconect">
+			<view class="orderItemconectimg"></view>
+			<view class="orderItemconectmsg">
+				<view class="orderItemconectmsgtitle">90-150㎡室内清洁打扫一次</view>
+				<view class="orderItemconectmsgCompany">
+					<text>勤鸽家政服务有限公司</text>
+					<text>清洁清洗</text>
+					<text>五华县</text>
+				</view>
+				<view class="orderItemconectmsgdate">
+					<text>预约上门服务时间：</text>
+					<text style="color:#EC840"> 2020-03-28 10:00 </text>
+				</view>
+			</view>
+		</view>
+		<view class="orderItemadress">
+			<view>
+				<text style="color:#767676">服务地址：</text>
+				<text>梅州市五华县华兴北路与嘉乐街交汇处附近东北嘉福 苑4栋1单元602</text>
+        <image style="width:18rpx; height:30rpx; margin-left: 30rpx;" src="http://zxty.mrhkj.com/assets/servicePersonal/adressicon.png"></image>
+			</view>
+		</view>
+    <view class="orderItemBtn">
+    <view class="orderItemBtnA">联系客户</view>
+    <view class="orderItemBtnB">到达门口</view>
+    </view>
+	</view>
+
+</view>
+<SPtabbar>
+</SPtabbar>

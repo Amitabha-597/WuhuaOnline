@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "Serch":"/pages/Components/searchBox/index"
+  }
+}

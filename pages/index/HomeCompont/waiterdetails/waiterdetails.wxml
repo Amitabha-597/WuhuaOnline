@@ -1,0 +1,135 @@
+<view class="details">
+	<view class="details_header">
+		<view class="details_header_card">
+			<view class="details_headermsg">
+				<view class="details_headermsgname">
+					<text>王阿姨</text>
+					<image style="width:26rpx; vertical-align: bottom; margin-right: 9rpx;" src="http://zxty.mrhkj.com/assets/index/index/waiterdetails/heart02.png" mode="widthFix"> </image>
+					<image style="width:26rpx; vertical-align: bottom; margin-right: 9rpx;" src="http://zxty.mrhkj.com/assets/index/index/waiterdetails/heart02.png" mode="widthFix"> </image>
+					<image style="width:26rpx; vertical-align: bottom; margin-right: 9rpx;" src="http://zxty.mrhkj.com/assets/index/index/waiterdetails/heart02.png" mode="widthFix"> </image>
+					<image style="width:26rpx; vertical-align: bottom; margin-right: 9rpx;" src="http://zxty.mrhkj.com/assets/index/index/waiterdetails/heart02.png" mode="widthFix"> </image>
+					<image style="width:26rpx; vertical-align: bottom; margin-right: 9rpx;" src="http://zxty.mrhkj.com/assets/index/index/waiterdetails/heart01.png" mode="widthFix"> </image>
+				</view>
+				<view class="details_headermsginfo">
+					<text>学历 ：高中 </text>
+					<text>籍贯 ：广东</text>
+					<text> 全职</text>
+				</view>
+				<view class="details_headermsgprice">
+					<view class="details_headermsgpricechild">
+						<text>156</text>
+						<text style="font-size: 22rpx;">预约次数</text>
+					</view>
+					<view class="details_headermsgpricechild">
+						<text>2</text>
+						<text style="font-size: 22rpx;">从业年限</text>
+					</view>
+					<view class="details_headermsgpricechild">
+						<text>35</text>
+						<text style="font-size: 22rpx;">薪资(元/h)</text>
+					</view>
+
+
+
+				</view>
+			</view>
+		</view>
+		<view class="details_headerimgbox">
+			<image style="width:100%" src="http://zxty.mrhkj.com/assets/index/index/waiterdetails/avatar.png" mode="widthFix"></image>
+			<image class="details_gold" style="width:30rpx" src="http://zxty.mrhkj.com/assets/index/index/waiterdetails/gold.png" mode="widthFix"></image>
+		</view>
+
+	</view>
+
+	<view class="detailed_main">
+	 <view class="detailed_mainitem">
+			<view class="detailed_main_title">
+				<image style="width:30rpx" src="http://zxty.mrhkj.com/assets/index/index/waiterdetails/servicetype.png " mode="widthFix"></image>
+				<text style="width:30rpx">服务类型</text>
+			</view>
+			<view class="detailed_main_conent">清洁清扫、保姆月嫂、管道疏通</view>
+		</view>
+		<view class="detailed_mainitem">
+			<view class="detailed_main_title">
+				<image style="width:30rpx" src="http://zxty.mrhkj.com/assets/index/index/waiterdetails/adress.png " mode="widthFix"></image>
+				<text style="width:30rpx">所在公司</text>
+			</view>
+			<view class="detailed_main_conent">勤鸽家政服务有限公司</view>
+		</view>
+		<view class="detailed_mainitem">
+			<view class="detailed_main_title">
+				<image style="width:30rpx" src="http://zxty.mrhkj.com/assets/index/index/waiterdetails/jiashao.png " mode="widthFix"></image>
+				<text style="width:30rpx">自我介绍</text>
+			</view>
+			<view class="detailed_main_conent">
+				<text>	我是广东省五华县的，高中毕业，有一个孩子，
+				有3年家政经验，认真负责，吃苦耐劳。另外，
+				我会按摩，有一年医院护理经历。</text>
+				<view class="detailed_main_imgbox">
+					<image style="width:182rpx " src="http://zxty.mrhkj.com/assets/index/index/waiterdetails/jiashao01.png " mode="widthFix"></image>
+					<image style="width:182rpx" src="http://zxty.mrhkj.com/assets/index/index/waiterdetails/jiashao02.png " mode="widthFix"></image>
+					<image style="width:182rpx" src="http://zxty.mrhkj.com/assets/index/index/waiterdetails/jiashao03.png " mode="widthFix"></image>
+				</view>
+			</view>
+
+		</view>
+		<view class="detailed_mainitem">
+			<view class="detailed_main_title">
+				<image style="width:30rpx" src="http://zxty.mrhkj.com/assets/index/index/waiterdetails/zhengshu.png " mode="widthFix"></image>
+				<text style="width:30rpx">技能证书</text>
+			</view>
+			<view class="detailed_main_conent">
+				<image style="width:182rpx;  margin-right: 20rpx;" src="http://zxty.mrhkj.com/assets/index/index/waiterdetails/zhensghu01.png " mode="widthFix"></image>
+				<image style="width:182rpx;  margin-right: 20rpx;" src="http://zxty.mrhkj.com/assets/index/index/waiterdetails/zhensghu02.png " mode="widthFix"></image>
+
+
+
+			</view>
+		</view> 
+
+		<view class="detailed_mainitem">
+			<view class="detailed_main_title">
+				<image style="width:30rpx" src="http://zxty.mrhkj.com/assets/index/index/waiterdetails/servicetype.png " mode="widthFix"></image>
+				<text style="width:30rpx">工作经历</text>
+			</view>
+			<view class="detailed_main_conent">
+				<view class="detailed_main_conentbox">
+					<view class="detailed_main_conentleft">
+						<image style="width:23rpx" src="http://zxty.mrhkj.com/assets/index/index/waiterdetails/jigli.png " mode="widthFix"></image>
+					</view>
+					<view class="detailed_main_conentRight">
+						<view class="detailed_main_conentdate">2019.3-2020.3</view>
+						<view class="detailed_main_conentjingli">从事保姆工作，照顾老人，做家常菜。</view>
+					</view>
+				</view>
+				<view class="detailed_main_conentbox">
+					<view class="detailed_main_conentleft">
+						<image style="width:23rpx" src="http://zxty.mrhkj.com/assets/index/index/waiterdetails/jigli.png " mode="widthFix"></image>
+					</view>
+					<view class="detailed_main_conentRight">
+						<view class="detailed_main_conentdate">2019.3-2020.3</view>
+						<view class="detailed_main_conentjingli">从事保姆工作，照顾老人，做家常菜。</view>
+					</view>
+				</view>
+
+
+			</view>
+		</view>
+
+
+	</view>
+	
+</view>
+
+<view class="details_footer">
+	<view class="details_footerbox1 .br">
+		<image style="width:26rpx;margin-right:10rpx; vertical-align: middle;" src="http://zxty.mrhkj.com/assets/index/index/waiterdetails/msg.png" mode="widthFix"></image>
+		<navigator url="/pages/index/HomeCompont/onlineservice/onlineservice">在线客服</navigator>
+	</view>
+	<view class="details_footerbox1">
+		<image style="width:26rpx;margin-right:10rpx; vertical-align: middle;" src="http://zxty.mrhkj.com/assets/index/index/waiterdetails/tel.png" mode="widthFix"></image>
+		<text >电话咨询</text>
+	</view>
+	<view class="details_footerbtn" bindtap="showAct">定制服务</view>
+</view>
+	<ActionSheet bindactiontap="btnClick" show="{{showActionsheet}}" actions="{{groups}}" title=" s"></ActionSheet>

@@ -1,0 +1,21 @@
+<view class="group">
+	<view class="group_item" wx:for="{{writerList}}" wx:key="*this">
+		<view class="group_item_imgbox">
+			<image class="group_item_img" src="/assets/imgs/activity/whiter.png"></image>
+			<view class="group_item_countdown"> 倒计时:  03.00.00</view>
+		</view>
+		<view class="group_item_info">{{item.content}}</view>
+		<view class="group_item_price">
+			<view class="group_item_num_newprice">￥{{item.newprice}}</view>
+			<view class="group_item_num_oldprice">￥{{item.oldprice}}</view>
+		</view>
+		<view class="group_item_num">
+			<view class="group_item_num_poper">{{item.people}}人团</view>
+			<view class="group_item_num_remain">剩余{{item.remain}}</view>
+
+			<view class="group_item_num_btn" bindtap="Goandmakeaist">去拼单</view>
+		</view>
+
+	</view>
+
+</view>

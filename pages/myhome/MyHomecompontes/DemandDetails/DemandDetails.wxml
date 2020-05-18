@@ -1,0 +1,41 @@
+<view class="DemandDetails">
+	<view class="DemandDetails_header">
+		<swiper class="swiper" indicatorDots>
+			<block wx:for="background" wx:key="*this">
+				<swiper-item class="swiper">
+					<image style="width:100%" src="http://zxty.mrhkj.com/assets/index/myhome/houseImg.png" mode="widthFix"></image>
+				</swiper-item>
+			</block>
+		</swiper>
+		<view class="DemDe_header_title">
+			<view style="font-size:36rpx;font-weight:bold;color:rgba(34,34,34,1);"> 某某小区住宅需要全面清洁一次</view>
+			<view style="font-size:26rpx;font-weight:400;color:rgba(153,153,153,1);">31分钟前</view>
+			<view class="DemDe_header_titlec">
+				<view style="color: #EC8502;border: 1rpx solid #EC8502;">清洁清扫</view>
+				<view>清洁清扫</view>
+			</view>
+		</view>
+	</view>
+	<view class="DemandDetails_user">
+		<view class="DemandDetails_user_left around">
+			<view>姓名</view>
+			<view>姓名</view>
+			<view>姓名</view>
+		</view>
+		<view class="DemandDetails_user_Right around">
+			<view>欧阳妮妮</view>
+			<view>
+				18265536726
+			</view>
+			<view>
+				五华县某某小区2栋1单元506
+			</view>
+		</view>
+	</view>
+	<view class="DemandDetails_conent">
+		<view class="DemandDetails_conent_title">需求详情</view>
+		<view class="DemandDetails_conent_txt">常年在外出差，没有时间清扫打理。最好在xx小区附近，4月10号前能上门全面清洁...</view>
+	</view>
+
+
+</view>

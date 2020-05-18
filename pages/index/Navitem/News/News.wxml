@@ -1,0 +1,25 @@
+<view class="News">
+
+	<view class="NewsItem">
+		<view class="NewsItem_contentbox" wx:for="{{NewsLIst}}" wx:key="id">
+			<navigator class="NewsItem_content" url="/pages/index/Navitem/News/{{item.url}}">
+				<view class="NewsItem_content_imgbox">
+					<image style="width:100%" src="/assets/imgs/newsimg/newsimg.png" mode="widthFix"></image>
+				</view>
+				<view class="NewsItem_content_title">
+					<view class="NewsItem_content_title_txt">进军家政服务行业打造中国家政网， 家政服务成风口</view>
+					<view class="NewsItem_content_title_time">
+						<view>{{item.time}}分钟前</view>
+						<view>
+							<text>{{item.zan}}</text>
+							<image style="width:21rpx;margin-left: 8rpx;" src="/assets/imgs/newsimg/zan.png" mode="widthFix"></image>
+						</view>
+					</view>
+
+				</view>
+			</navigator>
+		</view>
+
+		<view class="NewsItem_border"></view>
+	</view>
+</view>

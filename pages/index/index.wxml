@@ -1,0 +1,116 @@
+<view class="container">
+	<view id="address_serch">
+		<picker class="address" mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+			<text class="address_txt"> {{region[2]}}</text>
+			<image class="address_icon" src="/assets/imgs/index/tabicon/xiala.png" mode="widthFix"></image>
+		</picker>
+		<view class="serch">
+			<icon type='search' mode="widthFix" size="15"></icon>
+			<input type="text" placeholder='请输入...' />
+		</view>
+	</view>
+
+	<view class="page-section page-section-spacing swiper">
+		<swiper indicator-dots="true" autoplay="true}">
+			<block wx:for="{{swiperimg}}" wx:key="*this">
+				<swiper-item>
+					<image src="http://zxty.mrhkj.com/assets/index/index/swiper/{{item}}.png" mode="widthFix"></image>
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+	<view id="tab_list">
+		<view wx:for="{{tablist}}" wx:key="*this" class="tab_item" bindtap="NavEvent" data-index="{{index}}" data-url="{{item.url}}">
+			<view class="tab_itemurl">
+				<image style="width: 80rpx;" src="http://zxty.mrhkj.com/assets/index/index/tabicon/{{item.img}}.png" mode="widthFix"></image>
+				<text class="name">{{item.name}}</text>
+			</view>
+		</view>
+	</view>
+	<view class="gold">
+		<view class="shop">金牌店铺</view>
+		<navigator class="more" url="/pages/index/HomeCompont/moreshop/moreshop">更多</navigator>
+	</view>
+
+	<view id="goldshop_list">
+		<view wx:for="{{shoplist}}" wx:key="*this" class="goldshop_item">
+			<image class="goldl" src="/assets/imgs/index/shoplist/{{item.goldls}}.png"></image>
+			<image src="http://zxty.mrhkj.com/assets/index/index/shoplist/{{item.img}}.png" mode="widthFix"></image>
+			<view class="shop_msg">
+				<view class="shop_msg_text">
+					<view class="shop_name">
+						{{item.shopname}}</view>
+					<view class="shop_volume">
+						<image class="heart" src="http://zxty.mrhkj.com/assets/index/index/shoplist/heart.png"></image>
+						<text>好评率{{item.evaluate}}%</text>
+						<text>成交量{{item.volume}}</text>
+					</view>
+				</view>
+					<navigator  class="shop_goshop" url="/pages/index/HomeCompont/servicedetails/servicedetails">
+						<button>进店</button>
+					</navigator>
+			</view>
+		</view>
+		<view id="avd">
+			<image src="http://zxty.mrhkj.com/assets/index/index/shoplist/avd.png" mode="widthFix"></image>
+		</view>
+	</view>
+	<view class="gold">
+		<view class="shop">金牌员工</view>
+		<view class="more">
+			<navigator url="/pages/index/HomeCompont/morewiter/index">更多</navigator>
+		</view>
+	</view>
+	<view id="waiter">
+		<view class="waiter_item" wx:for="{{waiterlist}}" wx:key="*this">
+			<view class="waiter_img">
+
+				<image src="http://zxty.mrhkj.com/assets/index/index/waiter/{{item.img}}.png" mode="widthFix"></image>
+
+			</view>
+			<view class="waiter_msg">
+				<view class="msg_info">
+					<text>{{item.name}} </text>
+					<text>{{item.age}}岁 </text>
+					<text class="price">{{item.price}}元/h</text>
+				</view>
+				<view class="msg_skill">
+					<text>{{item.skill.skill01}} </text>|
+					<text> {{item.skill.skill02}}</text>
+				</view>
+				<view class="msg_badge">
+					<text>{{item.badge.badge01}}</text>
+					<text>{{item.badge.badge02}}</text>
+				</view>
+				<view class="msg_checked">
+					<navigator url="/pages/index/HomeCompont/waiterdetails/waiterdetails">
+						<button>专人服务</button>
+					</navigator>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view id="contact">
+		<navigator class="contact" url="/pages/index/HomeCompont/onlineservice/onlineservice">
+			<view class="contact_item">
+				<view class="contact_msg">
+					<image class="contact_icon" src="http://zxty.mrhkj.com/assets/index/index/contact/kefu.png" mode="widthFix"></image>
+					<text>在线客服</text>
+				</view>
+				<view class="contact_next">
+					<image class="contact_next_icon" src="http://zxty.mrhkj.com/assets/index/index/contact/next.png" mode="widthFix"></image>
+				</view>
+			</view>
+		</navigator>
+		<view class="contact_item">
+			<view class="contact_msg">
+				<image class="contact_icon" src="http://zxty.mrhkj.com/assets/index/index/contact/tel.png" mode="widthFix"></image>
+				<text>电话咨询</text>
+			</view>
+			<view class="contact_next">
+				<image class="contact_next_icon" src="http://zxty.mrhkj.com/assets/index/index/contact/next.png" mode="widthFix"></image>
+			</view>
+		</view>
+	</view>
+	<view class="bottom_box"></view>
+</view>

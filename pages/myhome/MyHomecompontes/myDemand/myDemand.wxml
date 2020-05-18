@@ -1,0 +1,24 @@
+<view class="myDemand">
+	<view class="myDemand_item" bindtap="toDemandDetails">
+		<view class="myDemand_item_imgbox"> </view>
+		<view class="myDemand_item_conect">
+			<view class="myDemand_item_conectA">某某小区住宅需要全面清洁一次</view>
+			<view class="myDemand_item_conectB">常年在外出差，没有时间清扫打理。最好在xx小区附近，4月10号前能上门全面清洁...</view>
+			<view class="myDemand_item_conectC center">
+				<text>31分钟前</text>
+				<view>已受理</view>
+			</view>
+		</view>
+	</view>
+	<view class="myDemand_item">
+		<view class="myDemand_item_imgbox"> </view>
+		<view class="myDemand_item_conect">
+			<view class="myDemand_item_conectA">某某小区住宅需要全面清洁一次</view>
+			<view class="myDemand_item_conectB">常年在外出差，没有时间清扫打理。最好在xx小区附近，4月10号前能上门全面清洁...</view>
+			<view class="myDemand_item_conectC center">
+				<text>31分钟前</text>
+				<view>已受理</view>
+			</view>
+		</view>
+	</view>
+</view>

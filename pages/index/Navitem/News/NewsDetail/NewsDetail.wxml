@@ -1,0 +1,18 @@
+<view class="NewsDetail">
+
+	<view class="NewsDetail_title">
+		<view class="NewsDetail_title_txt">进军家政服务行业打造中国家政网，家政服 务成风口</view>
+		<view class="NewsDetail_title_msg">
+			<view>31分钟前</view>
+			<view>
+				<text>12</text>
+				<image style="width: 21rpx;margin-left: 8rpx;" src="/assets/imgs/newsimg/zan.png" mode="widthFix"> </image>
+			</view>
+		</view>
+	</view>
+	<view class="NewsDetailContent">
+		真正在加盟之前，创业者首先需要选择一个品牌，确定 加盟品牌之后，你就需要支付相应的加盟费用。就月嫂 这个行业来讲，爱月宝月嫂是一个不错的品牌。爱月宝 有着品牌专属的月嫂大学，能够提供月嫂、育婴师、小 儿推拿等培训课程，并确保每一位技师都是持证上岗， 安全合格。
+		<image style="width: 690rpx;" src="/assets/imgs/newsimg/newsbanner.png" mode="widthFix"> </image>
+有了优质的服务，爱月宝就会形成品牌效应，然后就会 为门店招揽来大量的顾客，有了顾客之后就不用担心没 有经营的问题了。开月嫂公司真的好吗？大家都知道现 在月嫂的工资可以说是不菲，有一些好一点的月嫂，其 实现目标甚至要破万。月嫂的主要职责就是照顾产妇以 及婴儿。
+	</view>
+</view>

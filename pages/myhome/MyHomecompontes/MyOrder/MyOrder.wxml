@@ -1,0 +1,247 @@
+<view class="Myorder">
+	<view class='Myorder_main'>
+		<!--Tab布局-->
+		<view class='title'>
+			<view class='titleSel' bindtap='titleClick' data-idx='0'>
+				<view class="titleSel_name" style="color:{{0 == currentIndex ? '#EC8401' : ''}}">全部</view>
+				<hr class="{{0 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}}" />
+			</view>
+			<view class='titleSel' bindtap='titleClick' data-idx='1'>
+				<view class="titleSel_name" style="color:{{1 == currentIndex ? '#EC8401' : ''}}">待付款</view>
+				<hr class="{{1 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}} " />
+			</view>
+			<view class='titleSel' bindtap='titleClick' data-idx='2'>
+				<view class="titleSel_name" style="color:{{2 == currentIndex ? '#EC8401' : ''}}">待上门</view>
+				<hr class="{{2 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}} " />
+			</view>
+			<view class='titleSel' bindtap='titleClick' data-idx='3'>
+				<view class="titleSel_name" style="color:{{3 == currentIndex ? '#EC8401' : ''}}">待服务</view>
+				<hr class="{{3 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}} " />
+			</view>
+			<view class='titleSel' bindtap='titleClick' data-idx='4'>
+				<view class="titleSel_name" style="color:{{4 == currentIndex ? '#EC8401' : ''}}">待评价</view>
+				<hr class="{{4 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}} " />
+			</view>
+		</view>
+		<view class="Myorder_line"></view>
+
+		<!--内容布局-->
+		<swiper class='swiper' bindchange='pagechange' current='{{currentIndex}}'>
+			<!-- 全部 -->
+			<swiper-item class='swiper'>
+				<view class="OrderBox">
+					<view class="order_Tobepaid" wx:for="{{orderList}}" wx:key="index" bindtap="toOrderDetalis" data-OrderTypes="{{item.url}}">
+						<view class="order_Tobepaid_title">
+							<view>
+								<text>订单编号：</text><text>{{item.OrderNo}}</text>
+							</view>
+							<view style="color:#EC8401">{{item.OrderType}}</view>
+						</view>
+
+						<view class="OrderBox_conent">
+							<view class="OrderBox_conent_img"></view>
+							<view class="OrderBox_conent_txt">
+								<view class="OrderBo_ServiceContent">{{item.serviceContent}}</view>
+								<view class="conent_txt_info">
+									<text >{{item.company}}</text>
+									<text > {{item.serviceType}} </text>
+									<text  > {{item.adress}}</text>
+								</view>
+								<view class="conent_txt_price">
+									<text>¥{{item.price}}</text>
+									<text style="color:#999">X{{item.num}}</text>
+								</view>
+							</view>
+
+						</view>
+						<view class="OrderBox_Statistics">
+							<view>共计<text>1</text>件商品</view>
+							<view>合计<text>¥166.00</text>（含服务小费）</view>
+						</view>
+						<view class="OrderBox_operation">
+							<view class="OrderBox_operationA" wx:if="{{item.operationA !=''}}">{{item.operationA}}</view>
+							<view class="OrderBox_operationB">{{item.operationB}}</view>
+						</view>
+					</view>
+				</view>
+			</swiper-item>
+
+
+
+			<!-- 待付款 -->
+			<swiper-item class='swiper' class='swiper'>
+				<view class="OrderBox">
+					<block wx:if="{{item.OrderTypes==1}}" wx:for="{{orderList}}" wx:key="index">
+						<view class="order_Tobepaid" bindtap="toOrderDetalis" data-OrderTypes="{{item.url}}">
+							<view class="order_Tobepaid_title">
+								<view>
+									<text>订单编号：</text><text>{{item.OrderNo}}</text>
+								</view>
+								<view style="color:#EC8401">{{item.OrderType}}</view>
+							</view>
+							<view class="OrderBox_conent">
+								<view class="OrderBox_conent_img"></view>
+								<view class="OrderBox_conent_txt">
+									<view class="OrderBo_ServiceContent">{{item.serviceContent}}</view>
+									<view class="conent_txt_info">
+										<text >{{item.company}}</text>
+										<text > {{item.serviceType}} </text>
+										<text  > {{item.adress}}</text>
+									</view>
+									<view class="conent_txt_price">
+										<text>¥{{item.price}}</text>
+										<text style="color:#999">X{{item.num}}</text>
+									</view>
+								</view>
+
+							</view>
+							<view class="OrderBox_Statistics">
+								<view>共计<text>1</text>件商品</view>
+								<view>合计<text>¥166.00</text>（含服务小费）</view>
+							</view>
+							<view class="OrderBox_operation">
+								<view class="OrderBox_operationA">{{item.operationA}}</view>
+								<view class="OrderBox_operationB">{{item.operationB}}</view>
+							</view>
+
+						</view>
+					</block>
+				</view>
+			</swiper-item>
+			<!-- 待上门 -->
+			<swiper-item class='swiper' class='swiper'>
+				<view class="OrderBox">
+					<block wx:if="{{item.OrderTypes==2}}" wx:for="{{orderList}}" wx:key="index">
+						<view class="order_Tobepaid" bindtap="toOrderDetalis" data-OrderTypes="{{item.url}}">
+							<view class="order_Tobepaid_title">
+								<view>
+									<text>订单编号：</text><text>{{item.OrderNo}}</text>
+								</view>
+								<view style="color:#EC8401">{{item.OrderType}}</view>
+							</view>
+							<view class="OrderBox_conent">
+								<view class="OrderBox_conent_img"></view>
+								<view class="OrderBox_conent_txt">
+									<view class="OrderBo_ServiceContent">{{item.serviceContent}}</view>
+									<view class="conent_txt_info">
+										<text >{{item.company}}</text>
+										<text > {{item.serviceType}} </text>
+										<text  > {{item.adress}}</text>
+									</view>
+									<view class="conent_txt_price">
+										<text>¥{{item.price}}</text>
+										<text style="color:#999">X{{item.num}}</text>
+									</view>
+								</view>
+
+							</view>
+							<view class="OrderBox_Statistics">
+								<view>共计<text>1</text>件商品</view>
+								<view>合计<text>¥166.00</text>（含服务小费）</view>
+							</view>
+							<view class="OrderBox_operation">
+								<view class="OrderBox_operationA">{{item.operationA}}</view>
+								<view class="OrderBox_operationB">{{item.operationB}}</view>
+							</view>
+
+						</view>
+					</block>
+				</view>
+			</swiper-item>
+			<!-- 待服务 -->
+			<swiper-item class='swiper' class='swiper'>
+				<view class="OrderBox">
+					<block wx:if="{{item.OrderTypes==3}}" wx:for="{{orderList}}" wx:key="index">
+						<view class="order_Tobepaid" bindtap="toOrderDetalis" data-OrderTypes="{{item.url}}">
+							<view class="order_Tobepaid_title">
+								<view>
+									<text>订单编号：</text><text>{{item.OrderNo}}</text>
+								</view>
+								<view style="color:#EC8401">{{item.OrderType}}</view>
+							</view>
+							<view class="OrderBox_conent">
+								<view class="OrderBox_conent_img"></view>
+								<view class="OrderBox_conent_txt">
+									<view class="OrderBo_ServiceContent">{{item.serviceContent}}</view>
+									<view class="conent_txt_info">
+										<text >{{item.company}}</text>
+										<text > {{item.serviceType}} </text>
+										<text  > {{item.adress}}</text>
+									</view>
+									<view class="conent_txt_price">
+										<text>¥{{item.price}}</text>
+										<text style="color:#999">X{{item.num}}</text>
+									</view>
+								</view>
+
+							</view>
+							<view class="OrderBox_Statistics">
+								<view>共计<text>1</text>件商品</view>
+								<view>合计<text>¥166.00</text>（含服务小费）</view>
+							</view>
+							<view class="OrderBox_operation">
+								<view class="OrderBox_operationA">{{item.operationA}}</view>
+								<view class="OrderBox_operationB">{{item.operationB}}</view>
+							</view>
+
+						</view>
+					</block>
+				</view>
+			</swiper-item>
+			<!-- 待评价 -->
+			<swiper-item class='swiper' class='swiper'>
+				<view class="OrderBox">
+					<block wx:if="{{item.OrderTypes==4}}" wx:for="{{orderList}}" wx:key="index">
+						<view class="order_Tobepaid" bindtap="toOrderDetalis" data-OrderTypes="{{item.url}}">
+							<view class="order_Tobepaid_title">
+								<view>
+									<text>订单编号：</text><text>{{item.OrderNo}}</text>
+								</view>
+								<view style="color:#EC8401">{{item.OrderType}}</view>
+							</view>
+							<view class="OrderBox_conent">
+								<view class="OrderBox_conent_img"></view>
+								<view class="OrderBox_conent_txt">
+									<view class="OrderBo_ServiceContent">{{item.serviceContent}}</view>
+									<view class="conent_txt_info">
+										<text >{{item.company}}</text>
+										<text > {{item.serviceType}} </text>
+										<text  > {{item.adress}}</text>
+									</view>
+									<view class="conent_txt_price">
+										<text>¥{{item.price}}</text>
+										<text style="color:#999">X{{item.num}}</text>
+									</view>
+								</view>
+
+							</view>
+							<view class="OrderBox_Statistics">
+								<view>共计<text>1</text>件商品</view>
+								<view>合计<text>¥166.00</text>（含服务小费）</view>
+							</view>
+							<view class="OrderBox_operation">
+								<view class="OrderBox_operationA" wx:if="{{item.operationA !=''}}"></view>
+								<view class="OrderBox_operationB">{{item.operationB}}</view>
+							</view>
+
+						</view>
+					</block>
+				</view>
+			</swiper-item>
+
+
+
+
+
+
+
+
+
+
+		</swiper>
+	</view>
+
+
+
+
+</view>
